@@ -1,0 +1,30 @@
+<div fxFlex="25"
+    fxFlex.lg="18"
+    fxFlex.sm="30"
+    *ngFor="let i of misAnimes">
+
+
+<mat-card>
+    <img class="img-card" mat-card-image
+     [src]="i.images.jpg.image_url" alt="">
+ 
+     <mat-card-content>
+        <mat-card-title> {{i.title}} </mat-card-title>
+     </mat-card-content>
+     <mat-card-actions>
+        <button
+        (click)="verMas(i.mal_id)"
+        matTooltip="Ver mas"
+        matTooltipPosition="above"
+         color="primary" mat-icon-button>
+            <mat-icon class="mat-18">visibility</mat-icon>
+        </button>
+        <button
+        matTooltip="Agregar a Favoritos"
+        matTooltipPosition="above"
+        color="accent" mat-icon-button>
+            <mat-icon class="mat-18">favorite</mat-icon>
+        </button>
+     </mat-card-actions>
+</mat-card>
+</div>

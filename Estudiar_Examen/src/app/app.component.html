@@ -1,0 +1,40 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav #barrita mode="over">
+        <mat-toolbar>
+            <span>Menu</span>
+            <button mat-icon-button
+            (click)="barrita.toggle()"
+            >
+            <mat-icon class="mat-18">
+                menu
+            </mat-icon>
+        </button>
+        </mat-toolbar>
+
+        <mat-nav-list dense>
+            <a routerLink="home" href="" mat-list-item>
+                <mat-icon mat-list-icon>movie</mat-icon>
+                <span>listado</span>
+            </a>
+
+            <a routerLink="buscar" href="" mat-list-item>
+                <mat-icon mat-list-icon>search</mat-icon>
+                <span>Buscar animes</span>
+            </a>
+
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-toolbar>
+        <button mat-icon-button
+        (click)="barrita.toggle()"
+        >
+
+        <mat-icon class="mat-18">
+            menu
+        </mat-icon>
+    </button>
+    </mat-toolbar>
+
+<router-outlet></router-outlet> 
+</mat-sidenav-container>

@@ -1,0 +1,43 @@
+<h1 class="pad">
+    {{miAnime?.data?.title}}
+</h1>
+<mat-divider></mat-divider>
+
+<div
+fxLayout="row wrap"
+fxLayoutAlign="center center"
+>
+<div fxFlex="20">
+    <img class="pad" [src]="miAnime?.data?.images?.jpg?.image_url" alt="">
+</div>
+<div fxFlex="80">
+    <p class="pad">
+        {{miAnime?.data?.synopsis}}
+    </p>
+    <h2>Generos:</h2>
+    <mat-chip-list class="pad">
+
+        <mat-chip color="accent" selected=""
+        *ngFor="let a of miAnime?.data?.genres">
+            {{a?.name}}
+        </mat-chip>
+    </mat-chip-list>
+</div>
+<div fxFlex="50">
+    <h2 class="pad">Openings</h2>
+    <mat-list dense>
+        <mat-list-item *ngFor="let item of miAnime?.data?.theme?.openings">
+            {{item}}
+    </mat-list-item>
+    </mat-list>
+</div>
+
+<div fxFlex="50">
+    <h2 class="pad">Endings</h2>
+    <mat-list dense>
+        <mat-list-item *ngFor="let item of miAnime?.data?.theme?.endings">
+            {{item}}
+    </mat-list-item>
+    </mat-list>
+</div>
+</div>
